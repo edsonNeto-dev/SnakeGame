@@ -14,8 +14,9 @@ public class Cobra {
     public void andar() {
 
     }
-    public void actionPerformed(ActionEvent e){
-        
+
+    public void cobraCresceu() {
+
     }
 
 }

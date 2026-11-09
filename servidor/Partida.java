@@ -21,5 +21,11 @@ public class Partida {
     private void criarBloco() {
 
     }
+    private void adicionarJogador(){
+
+    }
+    private void removerJogador(){
+        
+    }
 
 }

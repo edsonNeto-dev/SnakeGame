@@ -1,21 +1,16 @@
 package comum;
 
-public interface JogoRemoto {
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
-    public static void entrar() {
+public interface JogoRemoto extends Remote {
+   
+    void entrar() throws RemoteException;
 
-    }
+    boolean enviarDirecao(Direcao direcao) throws RemoteException ;
 
-    public static void enviarDirecao() {
+    void obterEstado() throws RemoteException;
 
-    }
-
-    public static void obterEstado() {
-
-    }
-
-    public static void sair() {
-
-    }
+    void sair() throws RemoteException;
 
 }

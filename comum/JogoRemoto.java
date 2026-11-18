@@ -4,10 +4,10 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface JogoRemoto extends Remote {
-   
-    void entrar() throws RemoteException;
 
-    boolean enviarDirecao(Direcao direcao) throws RemoteException ;
+   int entrar() throws RemoteException;
+
+    boolean enviarDirecao(Direcao direcao) throws RemoteException;
 
     void obterEstado() throws RemoteException;
 

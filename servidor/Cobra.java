@@ -1,10 +1,13 @@
 package servidor;
 
+import java.util.Arrays;
+
 import comum.Direcao;
 import comum.ConfigTabuleiro;
+import comum.EstadoCobra;
 
 public class Cobra {
-    private int corpoCobra = 6;
+    private  int corpoCobra = 6;
     private int blocosComidos;
     private int id;
     private boolean viva = true;
@@ -105,6 +108,12 @@ public boolean ocupaPosicao(int x,int y){
         }
         direcao = nova;
         return true;
+    }
+     // tira um foto da cobra no momento, e olha id, se ela esta viva, pontos e uma copia da posicao 
+    public EstadoCobra gerarEstado() {
+        int[] corpoX = Arrays.copyOf(eixoX, corpoCobra);
+        int[] corpoY = Arrays.copyOf(eixoY, corpoCobra);
+        return new EstadoCobra(id, viva, blocosComidos, corpoX, corpoY);
     }
 
     public void morrer() {

@@ -114,15 +114,16 @@ public class TelaJogo extends JPanel {
             desenharComida(g2, atual.getComidaX(), atual.getComidaY());
 
             // Outras cobras primeiro e a do jogador por último, para ela ficar por cima.
+            // Cobras mortas não são desenhadas: o corpo some do tabuleiro.
             EstadoCobra minha = null;
             for (EstadoCobra cobra : atual.getCobras()) {
                 if (cobra.getId() == meuId) {
                     minha = cobra;
-                } else {
+                } else if (cobra.isViva()) {
                     desenharCobra(g2, cobra);
                 }
             }
-            if (minha != null) {
+            if (minha != null && minha.isViva()) {
                 desenharCobra(g2, minha);
             }
 

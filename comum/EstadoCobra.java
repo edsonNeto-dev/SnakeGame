@@ -3,6 +3,7 @@ import java.io.Serializable;
 
 public class EstadoCobra implements Serializable {
    
+    private static final long serialVersionUID = 1L;
     private final int id;
     private final boolean viva;
     private final int pontos;

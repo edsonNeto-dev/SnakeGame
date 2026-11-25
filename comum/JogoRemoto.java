@@ -7,10 +7,10 @@ public interface JogoRemoto extends Remote {
 
    int entrar() throws RemoteException;
 
-    boolean enviarDirecao(Direcao direcao) throws RemoteException;
+    boolean enviarDirecao(int idJogador, Direcao direcao) throws RemoteException;
 
-    void obterEstado() throws RemoteException;
+    EstadoJogo obterEstado() throws RemoteException;
 
-    void sair() throws RemoteException;
+    void sair(int idJogador) throws RemoteException;
 
 }
